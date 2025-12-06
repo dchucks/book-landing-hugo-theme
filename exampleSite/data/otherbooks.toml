@@ -1,0 +1,29 @@
+hidden = true
+
+[[books]]
+title = "Podcasting Kaise Karein? | पॉडकास्टिंग कैसे करें?"
+description = "Complete guide for new podcasters in Hindi - learn how to start your podcast without studio or technical knowledge."
+cover = "/images/other-books/podcasting-guide-cover.jpg"
+buyUrl = "https://www.amazon.in/dp/9334292393"
+price = "₹399"
+
+[[books]]
+title = "Another Book Title"
+description = "Short description of another book by the author."
+cover = "/images/other-books/book2.jpg"
+buyUrl = "https://example.com"
+price = "$19"
+
+[[books]]
+title = "Third Book Title"
+description = "Description of the third book in the author's collection."
+cover = "/images/other-books/book3.jpg"
+buyUrl = "https://example.com"
+price = "$25"
+
+[[books]]
+title = "Fourth Book Title"
+description = "Description of the third book in the author's collection."
+cover = "/images/other-books/book3.jpg"
+buyUrl = "https://example.com"
+price = "$25"

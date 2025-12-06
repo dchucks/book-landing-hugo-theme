@@ -1,0 +1,63 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "The Agile Field Guide"
+theme = "book-landing"
+
+[taxonomies]
+  tag = ""
+  category = ""
+
+[params]
+  description = "Agile that actually works! No theater, no buzzwords, just results."
+  #author = "Debashish Chakrabarty"
+	
+  # Author Info (Site-wide defaults)
+  [params.author]
+	name = "Debashish Chakrabarty"
+	image = "/images/author-photo.png"
+  
+  # Social Media
+  [params.author.social]
+	website = "https://podbharati.com"
+	newsletter = "https://agilechronicles.substack.com/"
+	podcast = "https://parikrama.substack.com"
+  
+  # Contact
+  [params.contact]
+    email = "contact@podbharati.com"
+    contactUrl = "https://podbharati.com/contact/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "#home"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "#about-book"
+    weight = 2
+  [[menu.main]]
+    name = "What's Inside"
+    url = "#what-inside"
+    weight = 3
+  [[menu.main]]
+    name = "Reviews"
+    url = "#testimonials"
+    weight = 4
+  [[menu.main]]
+    name = "Author"
+    url = "#author"
+    weight = 5
+  [[menu.main]]
+    name = "Buy Now"
+    url = "#buy-now"
+    weight = 6
+  [[menu.main]]
+    name = "FAQ"
+    url = "#faq"
+    weight = 7

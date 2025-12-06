@@ -1,0 +1,14 @@
+{{ if .Params.newsletter.enabled }}
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-box">
+            <h3>{{ .Params.newsletter.title }}</h3>
+            <p>{{ .Params.newsletter.description | markdownify }}</p>
+            <a href="{{ .Params.newsletter.url }}" class="btn btn-primary" target="_blank" rel="noopener">
+                <i class="fa-solid fa-envelope"></i>
+                Subscribe to Newsletter
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}

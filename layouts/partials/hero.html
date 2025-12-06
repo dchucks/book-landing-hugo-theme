@@ -1,0 +1,27 @@
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">{{ .Title }}</h1>
+                {{ with .Params.subtitle }}
+                <h2 class="hero-subtitle">{{ . }}</h2>
+                {{ end }}
+                <div class="hero-description">
+                    {{ .Content }}
+                </div>
+                {{ with .Params.isbn }}
+                <p class="isbn">ISBN: {{ . }}</p>
+                {{ end }}
+                <div class="hero-buttons">
+                    <a href="#buy-now" class="btn btn-primary">Get Your Copy</a>
+                    <a href="#what-inside" class="btn btn-secondary">What's Inside</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                {{ with .Params.heroImage }}
+                <img src="{{ . | relURL }}" alt="{{ $.Title }} cover">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

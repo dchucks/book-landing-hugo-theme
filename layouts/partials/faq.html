@@ -1,0 +1,13 @@
+<section id="faq" class="faq-section">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.faqTitle | default "Frequently Asked Questions" }}</h2>
+        <div class="faq-grid">
+            {{ range .Site.Data.faq.faq }}
+            <div class="faq-item">
+                <h3>{{ .question }}</h3>
+                <p>{{ .answer }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

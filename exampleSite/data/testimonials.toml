@@ -1,0 +1,14 @@
+[[testimonials]]
+text = "Finally, a book that cuts through the Agile theater and shows you what actually works. No fluff, just battle-tested strategies."
+author = "Senior Scrum Master, Tech Startup"
+rating = 5
+
+[[testimonials]]
+text = "This guide helped us eliminate our Zombie Stand-ups and focus on delivering real value. Our velocity increased by 40%."
+author = "Product Owner, Enterprise Company"
+rating = 5
+
+[[testimonials]]
+text = "The framework comparison section alone is worth the price. Saved us months of trial and error."
+author = "Engineering Manager, SaaS Company"
+rating = 4

@@ -1,0 +1,41 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ .Site.Title }}</h3>
+                <p>{{ .Site.Params.description }}</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+			<!-- Social links from config -->
+            {{ if .Site.Params.author.social }}
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    {{ with .Site.Params.author.social.newsletter }}
+                    <li><a href="{{ . }}" target="_blank" rel="noopener">Newsletter</a></li>
+                    {{ end }}
+                    {{ with .Site.Params.author.social.podcast }}
+                    <li><a href="{{ . }}" target="_blank" rel="noopener">Podcast</a></li>
+                    {{ end }}
+                    {{ with .Site.Params.author.social.website }}
+                    <li><a href="{{ . }}" target="_blank" rel="noopener">Website</a></li>
+                    {{ end }}
+                    {{ with .Site.Params.contact.contactUrl }}
+                    <li><a href="{{ . }}" target="_blank" rel="noopener">Contact</a></li>
+                    {{ end }}				
+                </ul>
+            </div>
+			{{ end }}
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Year }} {{ .Site.Params.author.name }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

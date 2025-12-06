@@ -1,0 +1,29 @@
+[[features]]
+icon = "🎯"
+title = "Battle-Tested Playbook"
+description = "Make Agile work in the real world with practical, proven strategies that deliver actual results, not just compliance checkboxes."
+
+[[features]]
+icon = "⚡"
+title = "Avoid 7 Deadly Pitfalls"
+description = "Learn to spot and eliminate Zombie Stand-ups, endless meetings, and rigid processes that masquerade as Agile transformation."
+
+[[features]]
+icon = "🚀"
+title = "Scale Without Killing Innovation"
+description = "Master SAFe, LeSS, Nexus, and Scrum of Scrums to grow your Agile practice while maintaining team autonomy and creativity."
+
+[[features]]
+icon = "🎲"
+title = "Choose the Right Framework"
+description = "Understand when to use Scrum, Kanban, XP, Lean, or DSDM based on your actual context, not industry hype."
+
+[[features]]
+icon = "🌱"
+title = "Sustain Agile Culture"
+description = "Build and maintain an authentic Agile culture that lasts beyond the initial transformation enthusiasm."
+
+[[features]]
+icon = "📊"
+title = "Real Case Studies"
+description = "Learn from actual implementations with practical tips, actionable cheat sheets, and lessons from the trenches."

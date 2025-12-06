@@ -1,0 +1,34 @@
+benefitsTitle = "You'll Learn How To:"
+
+benefits = [
+    "Avoid the 7 deadly Scrum pitfalls that derail most transformations",
+    "Scale Agile without killing innovation using SAFe, LeSS, Nexus, or Scrum of Scrums",
+    "Choose the right framework (Scrum, Kanban, XP, Lean, DSDM) for your context",
+    "Sustain Agile culture for the long haul beyond initial excitement",
+    "Eliminate ceremony overload while maintaining team effectiveness",
+    "Manage stakeholder demands without compromising team velocity",
+    "Ship actual value instead of just completing sprints"
+]
+
+[bonus]
+icon = "🍭"
+title = "Bonus Content"
+description = "A 'Self-Assessment Quiz' with correct answers to test your Agile transformation progress and identify areas for improvement."
+
+audienceTitle = "Perfect For:"
+
+[[audience]]
+title = "Scrum Masters"
+description = "Fighting distractions and trying to keep ceremonies meaningful"
+
+[[audience]]
+title = "Product Owners"
+description = "Managing impossible stakeholder demands while protecting team capacity"
+
+[[audience]]
+title = "Developers"
+description = "Trying to ship value without ceremony overload"
+
+[[audience]]
+title = "Agile Coaches"
+description = "Leading transformations that deliver lasting cultural change"

@@ -1,0 +1,36 @@
+<!-- Use data/author.toml if it exists, otherwise config -->
+{{ $authorName := .Site.Data.author.name | default .Site.Params.author.name }}
+{{ $authorImage := .Site.Data.author.image | default .Site.Params.author.image }}
+{{ $authorBio := .Site.Data.author.bio | default .Site.Params.author.bio }}
+<section id="author" class="author-section">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.authorTitle | default "Meet the Author" }}</h2>
+        <div class="author-content">
+            <div class="author-image">
+                <img src="{{ $authorImage | relURL }}" alt="{{ $authorName }}">
+            </div>
+            <div class="author-bio">
+                <h3>{{ $authorName }}</h3>
+                {{ $authorBio | markdownify }}
+                
+				<!-- Social links from config -->
+                {{ if .Site.Params.author.social }}
+                <div class="author-links">
+                    {{ with .Site.Params.author.social.website }}
+                    <a href="{{ . }}" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Website</a>
+                    {{ end }}
+                    {{ with .Site.Params.author.social.newsletter }}
+                    <a href="{{ . }}" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i> Newsletter</a>
+                    {{ end }}
+                    {{ with .Site.Params.author.social.podcast }}
+                    <a href="{{ . }}" target="_blank" rel="noopener"><i class="fa-solid fa-podcast"></i> Podcast</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        
+        <!-- Other Books Carousel -->
+        {{ partial "author-books-carousel.html" . }}
+    </div>
+</section>

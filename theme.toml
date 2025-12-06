@@ -1,0 +1,12 @@
+name = "Book Landing Hugo Theme"
+license = "MIT"
+licenselink = "https://github.com/dchucks/book-landing-hugo-theme/blob/main/LICENSE"
+description = "A modern, responsive Hugo theme for create a landing page for a book"
+homepage = "https://github.com/dchucks/book-landing-hugo-theme"
+tags = ["book", "landing-page", "responsive", "single-page", "ecommerce", "boot-author"]
+features = ["responsive", "carousel", "reviews", "faq", "buy-buttons"]
+min_version = "0.80.0"
+
+[author]
+  name = "Debashish Chakrabarty"
+  homepage = "https://topmate.io/debashishc"

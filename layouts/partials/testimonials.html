@@ -1,0 +1,16 @@
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.testimonialsTitle | default "What Readers Say" }}</h2>
+        <div class="testimonial-grid">
+            {{ range .Site.Data.testimonials.testimonials }}
+            <div class="testimonial-card">
+                <div class="stars">
+                    {{ range (seq .rating) }}★{{ end }}
+                </div>
+                <p class="testimonial-text">"{{ .text }}"</p>
+                <p class="testimonial-author">— {{ .author }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+<section id="what-inside" class="sneak-peek-section">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.whatsInsideTitle | default "What's Inside" }}</h2>
+        
+        {{ if .Site.Data.whatsinside.benefits }}
+        <div class="content-box">
+            <h3>{{ .Site.Data.whatsinside.benefitsTitle | default "You'll Learn How To:" }}</h3>
+            <ul class="benefits-list">
+                {{ range .Site.Data.whatsinside.benefits }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        {{ if .Site.Data.whatsinside.bonus }}
+        <div class="content-box highlight-box">
+            <h3>{{ .Site.Data.whatsinside.bonus.icon }} {{ .Site.Data.whatsinside.bonus.title }}</h3>
+            <p>{{ .Site.Data.whatsinside.bonus.description }}</p>
+        </div>
+        {{ end }}
+
+        {{ if .Site.Data.whatsinside.audience }}
+        <div class="content-box">
+            <h3>{{ .Site.Data.whatsinside.audienceTitle | default "Perfect For:" }}</h3>
+            <div class="audience-grid">
+                {{ range .Site.Data.whatsinside.audience }}
+                <div class="audience-card">
+                    <h4>{{ .title }}</h4>
+                    <p>{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>

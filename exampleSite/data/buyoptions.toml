@@ -1,0 +1,19 @@
+[[comparison]]
+icon = "📱"
+title = "eBook (PDF/Kindle)"
+benefits = [
+    "Instant access",
+    "Searchable text",
+    "Read on any device",
+    "Lower price"
+]
+
+[[comparison]]
+icon = "📖"
+title = "Paperback"
+benefits = [
+    "Physical book feel",
+    "Easy note-taking",
+    "No screen time",
+    "Collectible edition"
+]
