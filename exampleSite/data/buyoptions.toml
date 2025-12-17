@@ -6,11 +6,11 @@ price = "₹299"
 originalPrice = "₹499"
 url = "https://topmate.io/debashishc/1471769"
 highlighted = true
-#features = [
-#    "Multiple formats",
-#    "No DRM restrictions",
-#   "Lifetime access"
-#]
+features = [
+    "Multiple formats",
+    "No DRM restrictions",
+   "Lifetime access"
+]
 
 [[options]]
 title = "Amazon Kindle"
@@ -20,27 +20,26 @@ price = "₹299"
 originalPrice = "₹499"
 url = "https://www.amazon.in/dp/B0G35V389J"
 highlighted = false
-#features = [
-#    "Instant download",
-#    "Read on any device",
-#    "Whispersync enabled"
-#]
+features = [
+    "Instant download",
+    "Read on any device",
+    "Whispersync enabled"
+]
 
 [[options]]
 title = "Paperback"
 description = "Available Worldwide on Amazon (except India)"
-#icon = "fa-solid fa-book"
+icon = "fa-solid fa-book"
 icon = "fa-brands fa-amazon"
 price = "$8.25"
 originalPrice = ""
 url = "https://a.co/d/8b9gwP5"
 highlighted = false
-
-#features = [
-#    "Free shipping eligible",
- #   "Premium paper quality",
-#    "Perfect binding"
-#]
+features = [
+    "Free shipping eligible (Prime)",
+    "Premium paper quality",
+    "Perfect binding"
+]
 
 [[options]]
 title = "Paperback"
@@ -50,8 +49,7 @@ price = "₹399"
 originalPrice = ""
 url = "https://store.pothi.com/book/debashish-chakrabarty-agile-field-guide/"
 highlighted = false
-#features = [
-#    "Dust jacket included",
-#    "Collector's edition",
-  #  "Signed copy available"
-#]
+features = [
+    "Premium paper quality",
+    "Perfect binding"
+]
