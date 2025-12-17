@@ -607,86 +607,231 @@ section {
     right: 0;
 }
 
-/* Buy Section */
+/* ===================================
+   BUY SECTION STYLES
+   =================================== */
+
 .buy-section {
-    background-color: var(--background);
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
-.buy-intro {
+.buy-section .section-header {
     text-align: center;
-    font-size: 1.2rem;
-    color: var(--text-medium);
-    margin-bottom: 3rem;
+    margin-bottom: 50px;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.pricing-card {
-    background-color: var(--background-alt);
-    padding: 2.5rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    border: 2px solid var(--border-color);
-}
-
-.pricing-card.featured {
-    border-color: var(--primary-color);
-    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-alt) 100%);
-    transform: scale(1.05);
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-xl);
-}
-
-.pricing-card h3 {
-    font-size: 1.75rem;
-    color: var(--primary-dark);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.price {
-    margin: 1.5rem 0;
-}
-
-.current-price {
-    font-size: 3rem;
-    color: var(--primary-color);
+.buy-section .section-header h2 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 15px;
     font-weight: 700;
 }
 
-.original-price {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    text-decoration: line-through;
-    margin-left: 0.5rem;
+.buy-section .section-header p {
+    font-size: 1.2rem;
+    color: #64748b;
 }
 
-.format-desc {
-    color: var(--text-medium);
-    margin-bottom: 1.5rem;
+/* Buy Cards Grid */
+.buy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.button-group {
+/* Individual Buy Card */
+.buy-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.buy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-color: var(--primary-color, #0ea5e9);
+}
+
+/* Highlighted Card */
+.buy-card-highlighted {
+    border: 2px solid var(--primary-color, #0ea5e9);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
+}
+
+.buy-card-highlighted:hover {
+    box-shadow: 0 25px 50px rgba(14, 165, 233, 0.3);
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Popular Badge */
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--secondary-color, #10b981) 0%, #059669 100%);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.popular-badge i {
+    margin-right: 5px;
+}
+
+/* Card Icon */
+.buy-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-color, #0ea5e9) 0%, #0284c7 100%);
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.edition-note {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-style: italic;
+.buy-card:hover .buy-card-icon {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+}
+
+.buy-card-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Card Title */
+.buy-card-title {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Card Description */
+.buy-card-description {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 1px;
+    min-height: 48px;
+}
+
+/* Price Display */
+.buy-card-price {
+    margin-bottom: 25px;
+}
+
+.original-price {
+    font-size: 1rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.current-price {
+    font-size: 2.2rem;
+    color: var(--primary-color, #0ea5e9);
+    font-weight: 700;
+}
+
+/* Buy Button */
+.buy-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--primary-color, #0ea5e9) 0%, #0284c7 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+}
+
+.buy-button i {
+    margin-right: 8px;
+}
+
+.buy-card-highlighted .buy-button {
+    background: linear-gradient(135deg, var(--secondary-color, #10b981) 0%, #059669 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.buy-card-highlighted .buy-button:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+/* Features List */
+.buy-features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0;
+    text-align: left;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.buy-features li {
+    padding: 8px 0;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.buy-features li i {
+    color: var(--secondary-color, #10b981);
+    margin-right: 10px;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .buy-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .buy-section {
+        padding: 60px 0;
+    }
+    
+    .buy-section .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .buy-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .buy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Format Comparison */

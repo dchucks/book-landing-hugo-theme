@@ -1,75 +1,50 @@
-<section id="buy-now" class="buy-section">
+{{ if .Site.Data.buyoptions }}
+<section class="buy-section" id="buy-now">
     <div class="container">
-        <h2 class="section-title">{{ .Params.buyTitle | default "Get Your Copy Today" }}</h2>
-        <p class="buy-intro">Available in eBook and Paperback formats</p>
+        <div class="section-header">
+            <h2>Get Your Copy Today</h2>
+            <p>Choose your preferred format and start reading</p>
+        </div>
         
-        <div class="pricing-grid">
-            {{ $ebookLinks := where .Params.buyLinks "category" "ebook" }}
-            {{ $paperbackLinks := where .Params.buyLinks "category" "paperback" }}
-            
-            <!-- eBook Card -->
-            {{ if $ebookLinks }}
-            <div class="pricing-card featured">
-                <h3>eBook Edition</h3>
-                {{ with .Params.bookPrice }}
-                <div class="price">
-                    <span class="current-price">{{ . }}</span>
-                    {{ with $.Params.originalPrice }}
-                    <span class="original-price">{{ . }}</span>
-                    {{ end }}
+        <div class="buy-grid">
+            {{ range $index, $option := .Site.Data.buyoptions.options }}
+            <div class="buy-card {{ if $option.highlighted }}buy-card-highlighted{{ end }}">
+                {{ if $option.highlighted }}
+                <div class="popular-badge">
+                    <i class="fas fa-star"></i> Popular
                 </div>
                 {{ end }}
-                <p class="format-desc">Instant download • PDF & Kindle formats</p>
-                <div class="button-group">
-                    {{ range $ebookLinks }}
-                    <a href="{{ .url }}" class="btn {{ if eq .type "primary" }}btn-primary{{ else }}btn-secondary{{ end }}" target="_blank" rel="noopener">
-                        <i class="{{ .icon }}"></i>
-                        {{ .name }}
-                    </a>
+                
+                <div class="buy-card-icon">
+                    <i class="{{ $option.icon }}"></i>
+                </div>
+                
+                <h3 class="buy-card-title">{{ $option.title }}</h3>
+				{{ if $option.description }}
+                <p class="buy-card-description">{{ $option.description }}</p>
+				{{ end }}
+                
+                <div class="buy-card-price">
+                    {{ if $option.originalPrice }}
+                    <span class="original-price">{{ $option.originalPrice }}</span>
                     {{ end }}
+                    <span class="current-price">{{ $option.price }}</span>
                 </div>
-                <p class="edition-note">Choose your preferred format</p>
-            </div>
-            {{ end }}
-            
-            <!-- Paperback Card -->
-            {{ if $paperbackLinks }}
-            <div class="pricing-card">
-                <h3>Paperback Edition</h3>
-                <div class="price">
-                    <span class="current-price">Varies</span>
-                </div>
-                <p class="format-desc">Physical book • Worldwide shipping</p>
-                <div class="button-group">
-                    {{ range $paperbackLinks }}
-                    <a href="{{ .url }}" class="btn btn-secondary" target="_blank" rel="noopener">
-                        <i class="{{ .icon }}"></i>
-                        {{ .name }}
-                    </a>
+                
+                <a href="{{ $option.url }}" class="buy-button" target="_blank" rel="noopener">
+                    <i class="fas fa-shopping-cart"></i> Buy Now
+                </a>
+                
+                {{ if $option.features }}
+                <ul class="buy-features">
+                    {{ range $option.features }}
+                    <li><i class="fas fa-check"></i> {{ . }}</li>
                     {{ end }}
-                </div>
-                <p class="edition-note">Ships from local warehouses</p>
+                </ul>
+                {{ end }}
             </div>
             {{ end }}
         </div>
-
-        <!-- Format Comparison -->
-        {{ if .Site.Data.buyoptions.comparison }}
-        <div class="format-comparison">
-            <h3>Not Sure Which Format?</h3>
-            <div class="comparison-grid">
-                {{ range .Site.Data.buyoptions.comparison }}
-                <div class="comparison-card">
-                    <h4>{{ .icon }} {{ .title }}</h4>
-                    <ul>
-                        {{ range .benefits }}
-                        <li>✓ {{ . }}</li>
-                        {{ end }}
-                    </ul>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-        {{ end }}
     </div>
 </section>
+{{ end }}

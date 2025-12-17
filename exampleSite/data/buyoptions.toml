@@ -1,19 +1,57 @@
-[[comparison]]
-icon = "📱"
-title = "eBook (PDF/Kindle)"
-benefits = [
-    "Instant access",
-    "Searchable text",
-    "Read on any device",
-    "Lower price"
-]
+[[options]]
+title = "eBook (PDF)"
+description = "Available Worldwide"
+icon = "fa-solid fa-file-pdf"
+price = "₹299"
+originalPrice = "₹499"
+url = "https://topmate.io/debashishc/1471769"
+highlighted = true
+#features = [
+#    "Multiple formats",
+#    "No DRM restrictions",
+#   "Lifetime access"
+#]
 
-[[comparison]]
-icon = "📖"
+[[options]]
+title = "Amazon Kindle"
+description = "Available Worldwide"
+icon = "fa-brands fa-amazon"
+price = "₹299"
+originalPrice = "₹499"
+url = "https://www.amazon.in/dp/B0G35V389J"
+highlighted = false
+#features = [
+#    "Instant download",
+#    "Read on any device",
+#    "Whispersync enabled"
+#]
+
+[[options]]
 title = "Paperback"
-benefits = [
-    "Physical book feel",
-    "Easy note-taking",
-    "No screen time",
-    "Collectible edition"
-]
+description = "Available Worldwide on Amazon (except India)"
+#icon = "fa-solid fa-book"
+icon = "fa-brands fa-amazon"
+price = "$8.25"
+originalPrice = ""
+url = "https://a.co/d/8b9gwP5"
+highlighted = false
+
+#features = [
+#    "Free shipping eligible",
+ #   "Premium paper quality",
+#    "Perfect binding"
+#]
+
+[[options]]
+title = "Paperback"
+description = "Available via Pothi.com in India"
+icon = "fa-solid fa-book-open"
+price = "₹399"
+originalPrice = ""
+url = "https://store.pothi.com/book/debashish-chakrabarty-agile-field-guide/"
+highlighted = false
+#features = [
+#    "Dust jacket included",
+#    "Collector's edition",
+  #  "Signed copy available"
+#]

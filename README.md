@@ -2,7 +2,7 @@
 
 A modern, responsive Hugo theme designed specifically for book landing pages. Perfect for authors, publishers, and self-publishers who want a professional single-page site to showcase and sell their books.
 
-![BookLanding Theme Preview](images/screenshot.jpg)
+![BookLanding Theme Preview](https://raw.githubusercontent.com/dchucks/book-landing-hugo-theme/master/images/screenshot.jpg)
 
 ## ✨ Features
 
