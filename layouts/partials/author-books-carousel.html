@@ -17,6 +17,7 @@
                 <div class="book-info">
                     <h4 class="book-title">{{ .title }}</h4>
                     <p class="book-description">{{ .description }}</p>
+					{{ if .price }}
                     <div class="book-footer">
                         <span class="book-price">{{ .price }}</span>
                         <a href="{{ .buyUrl }}" class="btn btn-small btn-primary" target="_blank" rel="noopener">
@@ -24,6 +25,7 @@
                             Buy Now
                         </a>
                     </div>
+					{{ end }}
                 </div>
             </div>
             {{ end }}
